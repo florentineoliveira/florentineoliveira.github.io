@@ -27,11 +27,11 @@
  - title:  <b>B.Sc. in Economics</b> (3rd year)
           institution: Paris 1 University
       year: 2018-2019
-      desription: Magistère d'Économie
+      description: Magistère d'Économie
   - title:  <b>B.Sc. in Maths and Economics</b> (1st and 2nd years)
           institution: ENC Bessières and Nanterre University
       year: 2015-2018
-      desription: CPGE ENS Paris-Saclay D2
+      description: CPGE ENS Paris-Saclay D2
 
 
 - title: Research Experiences
@@ -71,19 +71,3 @@
       items: Applied Economics Lunch Seminar, with Thomas Piketty and Vitaliia Eliseeva (PSE, 2023-2024)
       
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
