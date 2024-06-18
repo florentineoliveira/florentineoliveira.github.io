@@ -1,0 +1,177 @@
+{
+  "basics": {
+    "name": "Florentine Oliveira",
+    "label": "PhD Student",
+    "image": "",
+    "email": "florentineoliveira@psemail.eu",
+    "phone": "",
+    "url": "https://florentineoliveira.github.io/al-folio/",
+    "summary": "",
+    "location": {
+      "address": "48 boulevard Jourdan",
+      "postalCode": "75014",
+      "city": "Paris",
+      "countryCode": "FR",
+      "region": ""
+    }
+  },
+  "Education": [
+    {
+      "institution": "Paris School of Economics and EHES",
+      "location": "",
+      "url": "",
+      "area": "Advisor : Éric Maurin",
+      "studyType": "PhD in Economics",
+      "startDate": "2022",
+      "endDate": "present",
+      "score": "",
+      "courses": ""
+    },
+    {
+      "institution": "Paris School of Economics",
+      "location": "",
+      "url": "",
+      "area": "",
+      "studyType": "M.Sc. in Economics",
+      "startDate": "2019",
+      "endDate": "2021",
+      "score": "",
+      "courses": ""
+    },
+    {
+      "institution": "Paris 1 University",
+      "location": "",
+      "url": "",
+      "area": "Magistère d'Économie",
+      "studyType": "B.Sc. in Economics (3rd year)",
+      "startDate": "2018",
+      "endDate": "2019",
+      "score": "",
+      "courses": ""
+    },
+    {
+      "institution": "ENC Bessières and Paris Nanterre University",
+      "location": "",
+      "url": "",
+      "area": "CPGE ENS Paris-Saclay D2",
+      "studyType": "B.Sc. in Mathematics and Economics (1st and 2nd years)",
+      "startDate": "2015",
+      "endDate": "2018",
+      "score": "",
+      "courses": ""
+    }
+  ],
+  "Research Experiences": [
+     {
+      "name": "DARES (Statistics Service of the French Labor Ministry)",
+      "position": "Pre-doc",
+      "url": "",
+      "startDate": "2021-2022",
+      "endDate": "",
+      "summary": "",
+      "highlights": ""
+    },
+    {
+     "name": "Paris 1 University",
+     "position": "Research Assistant",
+     "url": "",
+     "startDate": "2019",
+     "endDate": "",
+     "summary": "Research assistant to professor Nicolas Jacquemet",
+     "highlights": ""
+    }
+  ],
+  "Conferences and Seminar Presentations": [
+    {
+     "organization": "",
+     "location": "",
+     "position": "",
+     "url": "",
+     "startDate": "2024",
+     "endDate": "",
+     "summary": "Labor Chair Internal Seminar (PSE), Labor and Public Internal Seminar (PSE), Afepop 2024, Applied Economics Lunch Seminar (PSE), JMA 2024, IAAE 2024, EEA-ESEM 2024, EALE 2024",
+     "highlights":""
+    },
+    {
+     "organization": "",
+     "location": "",
+     "position": "",
+     "url": "",
+     "startDate": "2023",
+     "endDate": "",
+     "summary": "Labor Chair Internal Seminar (PSE)",
+     "highlights":""
+    }
+  ],
+  "Other Academic Activities": [
+    {
+     "organization": "Paris School of Economics",
+     "location": "",
+     "position": "Seminar Organization",
+     "url": "",
+     "startDate": "2023",
+     "endDate": "2024",
+     "summary": "Organisation of the Applied Lunch Economic Seminar (PSE) with Thomas Piketty and Vitaliia Eliseeva",
+     "highlights":""
+    },
+    {
+     "organization": "Education Economics",
+     "location": "",
+     "position": "Refereeing",
+     "url": "",
+     "startDate": "",
+     "endDate": "",
+     "summary": "",
+     "highlights":""
+    }
+  ],
+  "Grants and Awards": [
+    {
+     "title": "Labor Chair (PSE)",
+     "date": "2022-present",
+     "awarder": "Full doctoral fellowship",
+     "url": "",
+     "summary": ""
+    },
+    {
+     "title": "Education Policy and Social Mobility (PSE)",
+     "date": "2022-2025",
+     "awarder": "Research Grant",
+     "url": "",
+     "summary": ""
+    },
+    {
+     "title": "ADRES",
+     "date": "2024",
+     "awarder": "Conference participation grant",
+     "url": "",
+     "summary": ""
+    }
+  ],
+  "General Information": [
+    {
+     "name": "IT skills",
+     "level": "Master",
+     "icon": "fa-solid fa-hashtag",
+     "keywords": [
+       "R, Python (basis), Latex, Office"
+      ]
+    },
+    {
+     "name": "Languages",
+     "level": "Master",
+     "icon": "fa-solid fa-hashtag",
+     "keywords": [
+        "French (native), English (fluent), German (B2)"
+      ]
+    },
+    {
+     "name": "Nationality",
+     "level": "Master",
+     "icon": "fa-solid fa-hashtag",
+     "keywords": [
+        "French"
+      ]
+    }
+  ]
+}
