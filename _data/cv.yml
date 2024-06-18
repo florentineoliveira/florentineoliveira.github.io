@@ -21,15 +21,15 @@
       year: 2022-present
       description:
         - '<u>Advisor:</u> <a href="https://www.parisschoolofeconomics.eu/fr/maurin-eric/" target="_blank"><b>Éric Maurin</b></a>'
- - title:  <b>M.Sc. in Economics</b>
-          institution: Paris School of Economics
+    - title:  <b>M.Sc. in Economics</b>
+      institution: Paris School of Economics
       year: 2019-2021
- - title:  <b>B.Sc. in Economics</b> (3rd year)
-          institution: Paris 1 University
+    - title:  <b>B.Sc. in Economics</b> (3rd year)
+      institution: Paris 1 University
       year: 2018-2019
       description: Magistère d'Économie
-  - title:  <b>B.Sc. in Maths and Economics</b> (1st and 2nd years)
-          institution: ENC Bessières and Nanterre University
+    - title:  <b>B.Sc. in Maths and Economics</b> (1st and 2nd years)
+      institution: ENC Bessières and Nanterre University
       year: 2015-2018
       description: CPGE ENS Paris-Saclay D2
 
