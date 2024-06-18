@@ -3,15 +3,13 @@
 
 <div class="row">
   <div class="col-sm-2 abbr">
-    {% if entry.abbr %}
-      {% if site.data.venues[entry.abbr] %}
-        <abbr class="badge">
-          <a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a>
-        </abbr>
-      {% else %}
-        <abbr class="badge">{{entry.abbr}}</abbr>
-      {% endif %}
+  {% if entry.abbr %}
+    {% if site.data.venues[entry.abbr] %}
+    <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a></abbr>
+    {% else %}
+    <abbr class="badge">{{entry.abbr}}</abbr>
     {% endif %}
+  {% endif %}
   </div>
 
   <div id="{{entry.key}}" class="col-sm-8">
@@ -21,13 +19,12 @@
       <div class="title">{{entry.title}}</div>
       <div class="prevtitle">{{entry.prevtitle}}</div>
       <div class="author">
-        {% assign author_count = entry.author_array | size %}
-        {% assign author_index = 0 %}
         {% for author in entry.author_array %}
-          {% assign author_index = author_index | plus: 1 %} {# <-- Ligne ajoutée pour incrémenter l'index de l'auteur #}
           {% assign author_is_self = false %}
-          {% if author.last == site.data.self.lastname and site.data.self.firstname contains author.first %}
-            {% assign author_is_self = true %}
+          {% if author.last == site.data.self.lastname%}
+            {% if site.data.self.firstname contains author.first%}
+              {% assign author_is_self = true %}
+            {% endif %}
           {% endif %}
           {% assign coauthor_url = nil %}
           {% if site.data.coauthors[author.last] %}
@@ -39,20 +36,38 @@
             {% endfor %}
           {% endif %}
 
-          {% unless author_is_self %} {# <-- Condition pour exclure votre nom de l'affichage #}
-            {% if author_index > 1 %}
-              {% if forloop.last %}
-                and 
-              {% else %}
-                , 
-              {% endif %}
-            {% endif %}
+          {% if forloop.length == 2 %}
             {% if coauthor_url %}
-              <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
-            {% else %}
-              {{author.last}}, {{author.first}}
+              <i>with</i> <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
             {% endif %}
-          {% endunless %}
+          {% else %}
+          {% unless forloop.last and forloop.length > 1 %}
+              {% if forloop.first %}
+                {% if coauthor_url %}
+                  <i>with</i> <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
+                {% endif %}
+              {% else %}
+                {% if author_is_self %}
+                {% else %}
+                {% if coauthor_url %}
+                  <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
+                {% else %}
+                  {{author.last}}, {{author.first}},
+                {% endif %}
+              {% endif %}
+              {% endif %}
+            {% else %}
+              {% if author_is_self %}
+
+              {% else %}
+                {% if coauthor_url %}
+                  and <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
+                {% else %}
+                  and {{author.last}}, {{author.first}}
+                {% endif %}
+              {% endif %}
+            {% endunless %}
+          {% endif %}
         {% endfor %}
       </div>
 
@@ -135,7 +150,7 @@
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
-      {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or entry.eprint or entry.pmid or entry.isbn %}
+      {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or  entry.eprint or entry.pmid or entry.isbn %}
       {% assign entry_has_dimensions_badge = entry.dimensions or entry.doi or entry.pmid %}
       {% assign entry_has_google_scholar_badge = entry.google_scholar_id %}
       {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge %}
@@ -154,7 +169,7 @@
               {% elsif entry.altmetric %}
                 data-altmetric-id="{{ entry.altmetric }}"
               {% elsif entry.pmid %}
-                data-pmid="{{ entry.pmid }}
+                data-pmid="{{ entry.pmid }}"
               {% elsif entry.isbn %}
                 data-isbn="{{ entry.isbn }}"
               {% endif %}
@@ -166,7 +181,7 @@
               {% if entry.doi %}
                 data-doi="{{ entry.doi }}"
               {% else %}
-                data-pmid="{{ entry.pmid }}
+                data-pmid="{{ entry.pmid }}"
               {% else %}
                 data-id="{{ entry.dimensions }}"
               {% endif %}
@@ -223,4 +238,3 @@
     {% endif %}
   </div>
 </div>
-
