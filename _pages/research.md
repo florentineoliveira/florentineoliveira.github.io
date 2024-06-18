@@ -8,7 +8,7 @@ publications: false
 ---
 
 
-### Work in progress
+### work in progress
 <div class="publications">
 
 {% for y in page.type %}
