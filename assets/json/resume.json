@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Florentine Oliveira",
-    "label": "PhD Student",
+    "label": "",
     "image": "",
     "email": "florentineoliveira@psemail.eu",
     "phone": "",
-    "url": "https://florentineoliveira.github.io/al-folio/",
+    "url": "",
     "summary": "",
     "location": {
       "address": "48 boulevard Jourdan",
@@ -171,6 +171,14 @@
      "icon": "fa-solid fa-hashtag",
      "keywords": [
         "French"
+      ]
+    },
+    {
+     "name": "Birth Date",
+     "level": "Master",
+     "icon": "fa-solid fa-hashtag",
+     "keywords": [
+        "11th April 1998"
       ]
     }
   ]
