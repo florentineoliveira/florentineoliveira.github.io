@@ -1,0 +1,10 @@
+- title: Paris Sciences et Lettres
+  type: table
+  contents:
+    - title: '<b>Introduction to Economic Research with R</b>'
+      year: 2024-2025
+      description:
+        - 3rd year undergraduate course (CPES)
+        - introduces students to R and to the funamental building blocks of econometrics
+        # - '<u><a href="https://github.com/ScPoEcon/ScPoEconometrics-Slides#scpoeconometrics-slide-host" target="_blank">Slides</a></u>'
+  
