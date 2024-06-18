@@ -217,10 +217,10 @@ sass:
 # Jekyll Minifier
 # -----------------------------------------------------------------------------
 
-jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js"]
-  uglifier_args:
-    harmony: true
+#jekyll-minifier:
+#  exclude: ["robots.txt", "assets/js/search/*.js"]
+#  uglifier_args:
+#    harmony: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
@@ -245,8 +245,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Oliveira]
+  first_name: [Florentine]
 
   style: apa
   locale: en
@@ -257,65 +257,65 @@ scholar:
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
   # See https://github.com/alshedivat/al-folio/issues/357.
-  bibtex_filters: [latex, smallcaps, superscript]
 
   replace_strings: true
   join_strings: true
+  # bibtex_filters: [latex, smallcaps, superscript]
 
   details_dir: bibliography
+  details_layout: bibtex.html
   details_link: Details
 
   query: "@*"
-  group_by: year
-  group_order: descending
-
+  
+  
 # Display different badges withs stats for your publications
-enable_publication_badges:
-  altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
-  dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
-  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
+#enable_publication_badges:
+#  altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+#  dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
+#  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords:
-  [
-    abbr,
-    abstract,
-    additional_info,
-    altmetric,
-    arxiv,
-    award,
-    award_name,
-    bibtex_show,
-    blog,
-    code,
-    html,
-    pdf,
-    poster,
-    preview,
-    selected,
-    slides,
-    supp,
-    video,
-    website,
-  ]
+#filtered_bibtex_keywords:
+#  [
+#    abbr,
+#    abstract,
+#    additional_info,
+#    altmetric,
+#    arxiv,
+#    award,
+#    award_name,
+#    bibtex_show,
+#    blog,
+#    code,
+#    html,
+#    pdf,
+#    poster,
+#   preview,
+#    selected,
+#    slides,
+#    supp,
+#    video,
+#    website,
+# ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
-more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
+# max_author_limit: 3 # leave blank to always show all authors
+# more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
-enable_publication_thumbnails: true
+# enable_publication_thumbnails: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes
 # -----------------------------------------------------------------------------
 
 # These are the defaults
-external_links:
-  enabled: true
-  rel: external nofollow noopener
-  target: _blank
-  exclude:
+#external_links:
+#  enabled: true
+#  rel: external nofollow noopener
+#  target: _blank
+#  exclude:
 
 # -----------------------------------------------------------------------------
 # Responsive WebP Images
@@ -323,22 +323,22 @@ external_links:
 
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
-imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
-  widths:
-    - 480
-    - 800
-    - 1400
-  input_directories:
-    - assets/img/
-  input_formats:
-    - ".jpg"
-    - ".jpeg"
-    - ".png"
-    - ".tiff"
-    - ".gif"
-  output_formats:
-    webp: "-quality 85"
+#imagemagick:
+#  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+#  widths:
+#    - 480
+#    - 800
+#    - 1400
+#  input_directories:
+#    - assets/img/
+#  input_formats:
+#    - ".jpg"
+#    - ".jpeg"
+#    - ".png"
+#    - ".tiff"
+#    - ".gif"
+#  output_formats:
+#    webp: "-quality 85"
 
 # Lazy loading images
 #   If you enable lazy loading, all images will add the loading="lazy" attribute.
