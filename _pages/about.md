@@ -16,7 +16,7 @@ social: true # includes social icons at the bottom of the page
 ---
 Welcome to my website!
 
-I am a second year **PhD Student** at <a href="https://www.parisschoolofeconomics.eu/fr/" target="_blank">`Paris School of Economics`</a>.
+I am a second year **PhD Student** at <a href="https://www.parisschoolofeconomics.eu/fr/" target="_blank">`Paris School of Economics`</a>, under the supervision of <a href="https://www.parisschoolofeconomics.eu/fr/maurin-eric/" target="_blank">`Éric Maurin`</a>
 
 My research interests are **Family Economics**, **Economics of Education** and **Labor Economics**.
 
