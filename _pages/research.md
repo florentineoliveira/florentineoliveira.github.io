@@ -13,9 +13,9 @@ publications: false
 ### Work in progress
 <div class="publications">
 
-{% for y in page.years %}
+{% for y in page.type %}
   <!-- <h2 class="year">{{y}}</h2> -->
-  {% bibliography -f ongoing -q @*[year={{y}}]* %}
+  {% bibliography -f ongoing -q @*[abbr={{y}}]* %}
 {% endfor %}
 
 </div>
