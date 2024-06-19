@@ -14,7 +14,7 @@
               {{- site.middle_name -}}
             {% endif %}
             {% if site.last_name %}
-              {{- site.last_name -}}
+              {{- site.last_name }}
             {% endif %}
           {% else %}
             {{- site.title -}}
@@ -95,7 +95,8 @@
                   </div>
                 </li>
               {% else %}
-                <li class="nav-item {% if page.url contains p.permalink %}active{% endif %}">
+                {% assign parent_link = p.permalink | remove: 'index.html' %}
+                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
                   {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
                     {{- p.title }}
@@ -107,6 +108,7 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          {# Commented out search section
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
@@ -115,6 +117,7 @@
               </button>
             </li>
           {% endif %}
+          #}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
