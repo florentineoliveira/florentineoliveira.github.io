@@ -13,72 +13,70 @@
   </div>
 
   <div id="{{entry.key}}" class="col-sm-8">
-  {% if entry.type == "thesis" %}
-    {{reference}}
-  {% else %}
-    <div class="title">{{entry.title}}</div>
-    <div class="prevtitle">{{entry.prevtitle}}</div>
-    <div class="author">
-      {% assign coauthors = "" %}
-      {% assign first_author = true %}
-      {% for author in entry.author_array %}
-        {% assign author_is_self = false %}
-        {% if author.last == site.data.self.lastname%}
-          {% if site.data.self.firstname contains author.first%}
-            {% assign author_is_self = true %}
-          {% endif %}
-        {% endif %}
-        {% assign coauthor_url = nil %}
-        {% if site.data.coauthors[author.last] %}
-          {% for coauthor in site.data.coauthors[author.last] %}
-            {% if coauthor.firstname contains author.first %}
-              {% assign coauthor_url = coauthor.url %}
-              {% break %}
+    {% if entry.type == "thesis" %}
+      {{reference}}
+    {% else %}
+      <div class="title">{{entry.title}}</div>
+      <div class="prevtitle">{{entry.prevtitle}}</div>
+      <div class="author">
+        {% assign coauthors = "" %}
+        {% assign first_author = true %}
+        {% for author in entry.author_array %}
+          {% assign author_is_self = false %}
+          {% if author.last == site.data.self.lastname%}
+            {% if site.data.self.firstname contains author.first%}
+              {% assign author_is_self = true %}
             {% endif %}
-          {% endfor %}
-        {% endif %}
-        {% if author_is_self %}
-          {% continue %}
-        {% endif %}
-        {% if first_author %}
-          {% assign first_author = false %}
-          {% if coauthor_url %}
-            <i>with</i> <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
-          {% else %}
-            <i>with</i> {{author.last}}, {{author.first}}
           {% endif %}
-        {% else %}
-          {% if forloop.last %}
-            and 
+          {% assign coauthor_url = nil %}
+          {% if site.data.coauthors[author.last] %}
+            {% for coauthor in site.data.coauthors[author.last] %}
+              {% if coauthor.firstname contains author.first %}
+                {% assign coauthor_url = coauthor.url %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% if author_is_self %}
+            {% continue %}
+          {% endif %}
+          {% if first_author %}
+            {% assign first_author = false %}
             {% if coauthor_url %}
-              <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
+              <i>with</i> <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
             {% else %}
-              {{author.last}}, {{author.first}}
+              <i>with</i> {{author.last}}, {{author.first}}
             {% endif %}
           {% else %}
-            {% if coauthor_url %}
-              <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
+            {% if forloop.last %}
+              and 
+              {% if coauthor_url %}
+                <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
+              {% else %}
+                {{author.last}}, {{author.first}}
+              {% endif %}
             {% else %}
-              {{author.last}}, {{author.first}},
+              {% if coauthor_url %}
+                <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
+              {% else %}
+                {{author.last}}, {{author.first}},
+              {% endif %}
             {% endif %}
           {% endif %}
-        {% endif %}
-      {% endfor %}
-    </div>
-  {% endif %}
-</div>
+        {% endfor %}
+      </div>
+    {% endif %}
 
-      <div class="periodical">
+    <div class="periodical">
       {% if entry.type == "article" and entry.journal %}
         <em>{{entry.journal}}</em><br>
-      {% elsif entry.type == "inproceedings" and entry.booktitle%}
+      {% elsif entry.type == "inproceedings" and entry.booktitle %}
         <em>In {{entry.booktitle}}</em><br>
       {% endif %}
       {% if entry.year %}
         {{entry.year}}
       {% endif %}
-      </div>
-    {% endif %}
+    </div>
 
     <!-- Links/Buttons -->
     <div class="links">
