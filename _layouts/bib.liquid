@@ -35,7 +35,6 @@
               {% endif %}
             {% endfor %}
           {% endif %}
-
           {% if forloop.length == 2 %}
             {% if coauthor_url %}
               <i>with</i> <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
@@ -58,7 +57,6 @@
               {% endif %}
             {% else %}
               {% if author_is_self %}
-
               {% else %}
                 {% if coauthor_url %}
                   and <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
