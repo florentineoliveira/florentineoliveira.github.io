@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /research/
-title: research
+title: Research
 type: [WP soon, in progress]
 nav: true
 publications: false
