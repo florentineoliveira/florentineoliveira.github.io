@@ -2,18 +2,22 @@
 layout: page
 permalink: /research/
 title: Research
-type: [WP soon, in progress]
+type: [WP, in progress]
 nav: true
 publications: false
 ---
 
-
-### work in progress
+### Working Papers
 <div class="publications">
-
 {% for y in page.type %}
-  <!-- <h2 class="year">{{y}}</h2> -->
+  {% bibliography -f working_papers -q @*[abbr={{y}}]* %}
+{% endfor %}
+</div>
+
+
+### Work in progress
+<div class="publications">
+{% for y in page.type %}
   {% bibliography -f ongoing -q @*[abbr={{y}}]* %}
 {% endfor %}
-
 </div>
