@@ -16,7 +16,7 @@ social: true # includes social icons at the bottom of the page
 ---
 Welcome to my website!
 
-I am a second year **PhD Student** at <a href="https://www.parisschoolofeconomics.eu/en/" target="_blank">`Paris School of Economics`</a>, under the supervision of <a href="https://www.parisschoolofeconomics.eu/en/maurin-eric/" target="_blank">`Éric Maurin`</a>.
+I am a third year **PhD Student** at <a href="https://www.parisschoolofeconomics.eu/en/" target="_blank">`Paris School of Economics`</a>, under the supervision of <a href="https://www.parisschoolofeconomics.eu/en/maurin-eric/" target="_blank">`Éric Maurin`</a>.
 
 My research interests lie at the intersection between **Family Economics**, **Economics of Education** and **Labor Economics**.
 
