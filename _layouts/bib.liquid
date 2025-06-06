@@ -49,15 +49,15 @@
           
           {% if forloop.last %}
             {% if coauthor_url %}
-              <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>
+              <a href="{{coauthor_url}}" target="_blank">{{author.first}} {{author.last}}</a>
             {% else %}
-              {{author.last}}, {{author.first}}
+              {{author.first}}, {{author.last}}
             {% endif %}
           {% else %}
             {% if coauthor_url %}
-              <a href="{{coauthor_url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
+              <a href="{{coauthor_url}}" target="_blank">{{author.first}} {{author.last}}</a>,
             {% else %}
-              {{author.last}}, {{author.first}},
+              {{author.first}}, {{author.last}},
             {% endif %}
           {% endif %}
         {% endfor %}
