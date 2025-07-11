@@ -1,10 +1,26 @@
-- title: Paris Sciences et Lettres
+- title: '<b>Introduction to Economic Research with R</b>'
   type: table
   contents:
-    - title: '<b>Introduction to Economic Research with R</b>'
-      year: 2024-2025
+    - title: Paris Sciences et Lettres (PSL)
+      year: 2024-present
       description:
         - 3rd year undergraduate course (CPES)
-        - introduction to R and basic econometrics
+        - Introduction to R and basic econometrics
         - '<u><a href="https://florentineoliveira.github.io/pratiques-de-la-recherche/" target="_blank">Slides</a></u>'
+
+
+- title: '<b>Economics of Education</b>'
+  type: table
+  contents:
+    - title: SciencesPo
+      year: 2025-present
+      description:
+        - Graduate course      
   
+- title: '<b>Mathematics</b>'
+  type: table
+  contents:
+    - title: SciencesPo
+      year: 2025-present
+      description:
+        - Math camp for graduates
