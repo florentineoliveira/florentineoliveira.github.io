@@ -144,6 +144,12 @@
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
       {% endif %}
     </div>
+    {% if entry.status %}
+      <!-- Status line (e.g., R&R) -->
+      <div class="status" style="margin-top: 0.5rem;">
+        <em>{{ entry.status }}</em>
+      </div>
+    {% endif %}
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or  entry.eprint or entry.pmid or entry.isbn %}
       {% assign entry_has_dimensions_badge = entry.dimensions or entry.doi or entry.pmid %}
