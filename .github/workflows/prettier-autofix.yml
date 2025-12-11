@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Prettier
-        run: npm install --global prettier
+      - name: Install Prettier + Liquid plugin
+        run: npm install --global prettier @shopify/prettier-plugin-liquid
 
       - name: Run Prettier
         run: |
