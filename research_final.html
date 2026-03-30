@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research 
+� Florentine Oliveira-Roux</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>/* ── Reset & Variables ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --ink: #1a1a2e;
+    --paper: #f7f4ef;
+    --accent: #dd0747;
+    --accent-light: #fce4ec;
+    --muted: #7a7060;
+    --rule: #d8d0c4;
+    --white: #ffffff;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* ── Top strip ── */
+.top-strip {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.6rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-strip span { opacity: 0.55; }
+
+/* ── Nav ── */
+nav {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+}
+
+.nav-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-name:hover { color: var(--accent); }
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.18s;
+    font-weight: 400;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/* ── Page header ── */
+.page-header {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 3rem 2rem;
+    position: relative;
+}
+.page-header::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 40px;
+    background: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 3rem;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+/* ── Main content ── */
+main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 3rem 4rem;
+}
+
+/* ── Section headers ── */
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+}
+.section-label h2 {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 400;
+    white-space: nowrap;
+}
+.section-label::after {
+    display: none;
+}
+
+/* ── Pills ── */
+.pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: all 0.18s;
+    white-space: nowrap;
+}
+.pill-solid {
+    background: var(--ink);
+    color: var(--paper);
+}
+.pill-solid:hover { background: var(--accent); color: white; }
+
+.pill-outline {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+}
+.pill-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.pill-accent {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+.pill-accent:hover { background: var(--accent); color: white; }
+
+/* ── Footer ── */
+footer {
+    border-top: 1px solid var(--rule);
+    padding: 1.5rem 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p {
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-1 { animation: fadeUp 0.45s 0.05s ease both; }
+.fade-2 { animation: fadeUp 0.45s 0.1s ease both; }
+.fade-3 { animation: fadeUp 0.45s 0.15s ease both; }
+.fade-4 { animation: fadeUp 0.45s 0.2s ease both; }
+.fade-5 { animation: fadeUp 0.45s 0.25s ease both; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    .top-strip, nav, main, .page-header, footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    nav { flex-direction: column; gap: 1rem; align-items: flex-start; }
+    .nav-links { gap: 1.2rem; }
+}
+</style>
+    <style>
+        .paper-card {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--rule);
+        }
+        .paper-card:first-child { border-top: 1px solid var(--rule); }
+
+        .paper-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.4;
+            margin-bottom: 0.4rem;
+        }
+
+        .paper-authors {
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 0.6rem;
+            font-weight: 300;
+        }
+        .paper-authors strong {
+            color: var(--ink);
+            font-weight: 500;
+        }
+
+        .paper-status {
+            display: inline-block;
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            background: var(--accent-light);
+            padding: 0.2rem 0.6rem;
+            border-radius: 3px;
+        }
+
+        .paper-abstract {
+            font-size: 0.85rem;
+            line-height: 1.75;
+            color: #4a4540;
+            margin-bottom: 0.8rem;
+            display: none;
+        }
+        .paper-abstract.open { display: block; }
+
+        .paper-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .abstract-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-family: 'DM Sans', sans-serif;
+            padding: 0.25rem 0.7rem;
+            border: 1px solid var(--rule);
+            border-radius: 100px;
+            transition: all 0.18s;
+            font-weight: 400;
+        }
+        .abstract-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav>
+        <a class="nav-name" href="index.html">Florentine Oliveira-Roux</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="research.html" class="active">Research</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header fade-1">
+        <h1>Research</h1>
+    </div>
+
+    <main>
+
+        <div class="section-label fade-2">
+            <h2>Working Papers</h2>
+        </div>
+
+        <div class="fade-3">
+            <div class="paper-card">
+                <div class="paper-title">Children of the Revolution: Women's Liberation and Children's Success</div>
+                <div class="paper-authors"><strong>Éric Maurin</strong> and <strong>Florentine Oliveira-Roux</strong></div>
+                <div class="paper-status">R&R 
+� Journal of Political Economy Microeconomics</div>
+                <div class="paper-abstract" id="abs-1">
+                    We re-examine the effects of the women's liberation movement of the 1960s on family structures and children's outcomes. Drawing on the French experience, we show that the movement favored the advent of smaller families, where the mother works outside the home and where the risk of divorce is greater, but that the combination of these changes had little effect on the educational and occupational trajectories of the children who lived through them.
+                </div>
+                <div class="paper-links">
+                    <button class="abstract-toggle" onclick="toggleAbstract('abs-1', this)">Abstract</button>
+                    <a class="pill pill-solid" href="https://www.iza.org/en/publications/dp/17236/children-of-the-revolution-womens-liberation-and-childrens-success" target="_blank">IZA Working Paper</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-label fade-4">
+            <h2>Work in Progress</h2>
+        </div>
+
+        <div class="fade-5">
+            <div class="paper-card">
+                <div class="paper-title">From Grades to Grins. The Effect of Standards-Based Grading on Students' Academic Achievements and Socio-emotional Skills</div>
+                <div class="paper-authors"><strong>Élise Huillery</strong>, <strong>Florentine Oliveira-Roux</strong> and <strong>Nathan Viltard</strong></div>
+                <div class="paper-links"></div>
+            </div>
+
+            <div class="paper-card">
+                <div class="paper-title">Educational Attainment Inequality Between Siblings</div>
+                <div class="paper-authors"><strong>Florentine Oliveira-Roux</strong></div>
+                <div class="paper-links"></div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script>
+        function toggleAbstract(id, btn) {
+            const el = document.getElementById(id);
+            el.classList.toggle('open');
+            btn.textContent = el.classList.contains('open') ? 'Hide abstract' : 'Abstract';
+        }
+    </script>
+
+</body>
+</html>

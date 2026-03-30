@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching 
+� Florentine Oliveira-Roux</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>/* ── Reset & Variables ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --ink: #1a1a2e;
+    --paper: #f7f4ef;
+    --accent: #dd0747;
+    --accent-light: #fce4ec;
+    --muted: #7a7060;
+    --rule: #d8d0c4;
+    --white: #ffffff;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* ── Top strip ── */
+.top-strip {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.6rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-strip span { opacity: 0.55; }
+
+/* ── Nav ── */
+nav {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+}
+
+.nav-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.nav-name:hover { color: var(--accent); }
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.18s;
+    font-weight: 400;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/* ── Page header ── */
+.page-header {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 3rem 2rem;
+    position: relative;
+}
+.page-header::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 40px;
+    background: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 3rem;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+/* ── Main content ── */
+main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 3rem 4rem;
+}
+
+/* ── Section headers ── */
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+}
+.section-label h2 {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 400;
+    white-space: nowrap;
+}
+.section-label::after {
+    display: none;
+}
+
+/* ── Pills ── */
+.pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: all 0.18s;
+    white-space: nowrap;
+}
+.pill-solid {
+    background: var(--ink);
+    color: var(--paper);
+}
+.pill-solid:hover { background: var(--accent); color: white; }
+
+.pill-outline {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+}
+.pill-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.pill-accent {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+.pill-accent:hover { background: var(--accent); color: white; }
+
+/* ── Footer ── */
+footer {
+    border-top: 1px solid var(--rule);
+    padding: 1.5rem 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p {
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-1 { animation: fadeUp 0.45s 0.05s ease both; }
+.fade-2 { animation: fadeUp 0.45s 0.1s ease both; }
+.fade-3 { animation: fadeUp 0.45s 0.15s ease both; }
+.fade-4 { animation: fadeUp 0.45s 0.2s ease both; }
+.fade-5 { animation: fadeUp 0.45s 0.25s ease both; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    .top-strip, nav, main, .page-header, footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    nav { flex-direction: column; gap: 1rem; align-items: flex-start; }
+    .nav-links { gap: 1.2rem; }
+}
+</style>
+    <style>
+        .course-card {
+            border: 1px solid var(--rule);
+            background: var(--white);
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.2rem;
+            transition: border-color 0.2s;
+        }
+        .course-card:hover { border-color: var(--accent); }
+
+        .course-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 1rem;
+        }
+
+        .course-entry {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+        .course-entry:last-child { margin-bottom: 0; }
+
+        .year-badge {
+            font-size: 0.62rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: var(--accent);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            white-space: nowrap;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+        }
+
+        .course-details {
+            flex: 1;
+        }
+        .course-institution {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 0.3rem;
+        }
+        .course-desc {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 0.4rem;
+        }
+        .course-desc li {
+            list-style: none;
+            padding-left: 0.8rem;
+            position: relative;
+        }
+        .course-desc li::before {
+            content: '
+�';
+            position: absolute;
+            left: 0;
+            color: var(--rule);
+        }
+        .course-link {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid var(--accent-light);
+            transition: border-color 0.18s;
+        }
+        .course-link:hover { border-color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a class="nav-name" href="index.html">Florentine Oliveira-Roux</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="teaching.html" class="active">Teaching</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header fade-1">
+        <h1>Teaching</h1>
+    </div>
+
+    <main>
+
+        <div class="fade-2">
+
+            <div class="course-card">
+                <div class="course-title">Introduction to Economic Research with R</div>
+                <div class="course-entry">
+                    <span class="year-badge">2024–Present</span>
+                    <div class="course-details">
+                        <div class="course-institution">Paris Sciences et Lettres (PSL)</div>
+                        <ul class="course-desc">
+                            <li>3rd year undergraduate course (CPES)</li>
+                            <li>Introduction to R and basic econometrics</li>
+                        </ul>
+                        <a class="course-link" href="https://florentineoliveira.github.io/pratiques-de-la-recherche/" target="_blank">Slides →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-title">Economics of Education</div>
+                <div class="course-entry">
+                    <span class="year-badge">2025–Present</span>
+                    <div class="course-details">
+                        <div class="course-institution">SciencesPo</div>
+                        <ul class="course-desc">
+                            <li>Graduate course</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-title">Mathematics</div>
+                <div class="course-entry">
+                    <span class="year-badge">2025–Present</span>
+                    <div class="course-details">
+                        <div class="course-institution">SciencesPo</div>
+                        <ul class="course-desc">
+                            <li>Math camp for graduates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
